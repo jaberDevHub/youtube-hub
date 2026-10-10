@@ -203,7 +203,7 @@ export function computeAchievements(creator) {
   ];
 }
 
-export const DEFAULT_YOUTUBE_API_KEY = 'AIzaSyCQq8VlDpO980tqD8QwEFpZaVZymwPzoGE';
+export const DEFAULT_YOUTUBE_API_KEY = (typeof import.meta !== 'undefined' && import.meta.env?.VITE_YOUTUBE_API_KEY) || '';
 
 // Generate activity heatmap based on real YouTube uploads and upload pace
 function generateContributionsFromRealUploads(videos = [], totalVideos = 50) {

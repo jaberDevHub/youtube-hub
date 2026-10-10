@@ -1,5 +1,5 @@
 import http from 'http';
-const API_KEY = process.env.YOUTUBE_API_KEY || 'AIzaSyCQq8VlDpO980tqD8QwEFpZaVZymwPzoGE';
+const API_KEY = process.env.YOUTUBE_API_KEY || process.env.VITE_YOUTUBE_API_KEY || '';
 
 async function fetchYouTubeChannel(handle) {
   const cleanHandle = handle.replace(/^@/, '');
