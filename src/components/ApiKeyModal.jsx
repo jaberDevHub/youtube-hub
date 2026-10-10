@@ -41,7 +41,7 @@ export function ApiKeyModal({ onClose, onApiKeySaved }) {
 
         <form onSubmit={handleSave} className="modal-body">
           <p className="modal-desc">
-            YouTubeHub includes rich authentic datasets for showcase creators (@jaberdevhub, @mkbhd, @fireship). 
+            YouTubeHub includes rich authentic datasets for showcase creators (@mrbeast, @mkbhd, @fireship). 
             To resolve any arbitrary channel in real-time directly from Google, you can provide your official <strong>YouTube Data API v3</strong> key.
           </p>
 

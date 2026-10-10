@@ -429,10 +429,15 @@ export async function resolveCreatorProfile(inputUrlOrHandle) {
     }
   }
 
-  // 2. Fallback to local resolver server (port 3001)
+  // 2. Fallback to resolver server (/api/resolve on Vercel or localhost:3001 in dev)
   try {
-    const liveRes = await fetch(`http://localhost:3001/api/resolve?handle=${encodeURIComponent(handle)}`);
-    if (liveRes.ok) {
+    const isLocalhost = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+    const primaryUrl = isLocalhost ? `http://localhost:3001/api/resolve?handle=${encodeURIComponent(handle)}` : `/api/resolve?handle=${encodeURIComponent(handle)}`;
+    let liveRes = await fetch(primaryUrl).catch(() => null);
+    if ((!liveRes || !liveRes.ok) && isLocalhost) {
+      liveRes = await fetch(`/api/resolve?handle=${encodeURIComponent(handle)}`).catch(() => null);
+    }
+    if (liveRes && liveRes.ok) {
       const liveData = await liveRes.json();
       if (liveData && liveData.avatar) {
         const subs = liveData.subscribers || 100000;

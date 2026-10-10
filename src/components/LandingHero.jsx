@@ -42,7 +42,7 @@ export function LandingHero({ onGenerateProfile, isLoading }) {
           <input 
             type="text" 
             className="hero-input"
-            placeholder="Paste your YouTube channel URL or @handle (e.g. youtube.com/@jaberdevhub)..."
+            placeholder="Paste your YouTube channel URL or @handle (e.g. youtube.com/@mrbeast)..."
             value={inputUrl}
             onChange={(e) => setInputUrl(e.target.value)}
             disabled={isLoading}
@@ -76,13 +76,13 @@ export function LandingHero({ onGenerateProfile, isLoading }) {
             <span className="chip-avatar-dot"></span>
             @ufc
           </button>
-          <button type="button" className="quickpick-chip" onClick={() => handleQuickPick('@jaberdevhub')}>
-            <span className="chip-avatar-dot"></span>
-            @jaberdevhub
-          </button>
           <button type="button" className="quickpick-chip" onClick={() => handleQuickPick('@mkbhd')}>
             <span className="chip-avatar-dot"></span>
             @mkbhd
+          </button>
+          <button type="button" className="quickpick-chip" onClick={() => handleQuickPick('@fireship')}>
+            <span className="chip-avatar-dot"></span>
+            @fireship
           </button>
         </div>
       </div>

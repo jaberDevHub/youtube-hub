@@ -16,7 +16,7 @@ export function Navbar({ onSelectCreator, currentHandle, isDark, onToggleTheme, 
     <header className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
-          <div className="navbar-brand" onClick={() => onSelectCreator('@jaberdevhub')}>
+          <div className="navbar-brand" onClick={() => { window.location.hash = '#/landing'; }}>
             <div className="brand-icon">
               <Youtube size={22} className="yt-icon" />
             </div>
@@ -40,16 +40,16 @@ export function Navbar({ onSelectCreator, currentHandle, isDark, onToggleTheme, 
               @ufc
             </button>
             <button 
-              className={`quick-pill ${currentHandle === '@jaberdevhub' ? 'active' : ''}`}
-              onClick={() => onSelectCreator('@jaberdevhub')}
-            >
-              @jaberdevhub
-            </button>
-            <button 
               className={`quick-pill ${currentHandle === '@mkbhd' ? 'active' : ''}`}
               onClick={() => onSelectCreator('@mkbhd')}
             >
               @mkbhd
+            </button>
+            <button 
+              className={`quick-pill ${currentHandle === '@fireship' ? 'active' : ''}`}
+              onClick={() => onSelectCreator('@fireship')}
+            >
+              @fireship
             </button>
           </nav>
         </div>
