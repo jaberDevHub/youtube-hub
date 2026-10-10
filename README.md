@@ -1,13 +1,3 @@
-# ⚡ YouTubeHub
-### GitHub-Style Profile Cards for YouTube Creators
-
-> One URL in. One sleek creator profile card out.
-
-## 🌐 Live Website
-> 🚀 Check it out here:  
-> [https://youtube-hub-profile.vercel.app](https://youtube-hub-profile.vercel.app)
-
-<div align="center">
 
 # ⚡ YouTubeHub
 ### The GitHub-Inspired Creator Profile Platform
@@ -26,7 +16,7 @@
 
 </div>
 
-## 🌐 Live Demo
+## 🌐 Live
 
 > 🚀 **Website URL:**  
 > [https://youtube-hub-profile.vercel.app](https://youtube-hub-profile.vercel.app)
