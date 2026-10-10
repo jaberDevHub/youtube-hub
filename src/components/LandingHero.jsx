@@ -21,7 +21,7 @@ export function LandingHero({ onGenerateProfile, isLoading }) {
       <div className="hero-badge-container">
         <span className="hero-badge">
           <Sparkles size={13} className="hero-badge-icon" />
-          The GitHub-Inspired Creator Profile Platform
+          The Modern Creator Profile Platform
         </span>
       </div>
 
@@ -31,7 +31,7 @@ export function LandingHero({ onGenerateProfile, isLoading }) {
       </h1>
 
       <p className="hero-subtitle">
-        Turn your YouTube channel into a gorgeous, information-rich developer-style profile. 
+        Turn your YouTube channel into a gorgeous, information-rich creator profile. 
         Track a 12-month contribution heatmap, unlock tier achievements, showcase your stats, 
         and share your permanent public creator link.
       </p>

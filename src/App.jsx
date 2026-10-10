@@ -12,7 +12,6 @@ import { Rankings } from './components/Rankings';
 import { AboutSection } from './components/AboutSection';
 import { ShareModal } from './components/ShareModal';
 import { VideoModal } from './components/VideoModal';
-import { ApiKeyModal } from './components/ApiKeyModal';
 import { resolveCreatorProfile, parseYouTubeInput } from './services/youtubeApi';
 import { AlertCircle, ArrowLeft, Sparkles, Youtube } from 'lucide-react';
 
@@ -85,7 +84,6 @@ export function App() {
           currentHandle={creator?.handle}
           isDark={isDark}
           onToggleTheme={() => setIsDark(!isDark)}
-          onOpenApiKeyModal={() => setActiveModal('apiKey')}
         />
       )}
 
@@ -152,7 +150,7 @@ export function App() {
             <div className="footer-left">
               <Youtube size={16} className="text-yt-red" />
               <span className="footer-brand">YouTubeHub</span>
-              <span className="footer-copy">© 2026. GitHub-Inspired Creator Profile Platform.</span>
+              <span className="footer-copy">© 2026 YouTubeHub. All rights reserved.</span>
             </div>
             <div className="footer-links">
               <span className="footer-pill">Official YouTube Data API Integration</span>
@@ -168,15 +166,6 @@ export function App() {
         <ShareModal 
           creator={creator} 
           onClose={() => setActiveModal(null)} 
-        />
-      )}
-
-      {activeModal === 'apiKey' && (
-        <ApiKeyModal 
-          onClose={() => setActiveModal(null)}
-          onApiKeySaved={() => {
-            if (creator) loadCreator(creator.handle);
-          }}
         />
       )}
 

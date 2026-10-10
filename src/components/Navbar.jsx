@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Youtube, Search, Sun, Moon, Key, ExternalLink, GitFork } from 'lucide-react';
+import { Youtube, Search, Sun, Moon } from 'lucide-react';
 
-export function Navbar({ onSelectCreator, currentHandle, isDark, onToggleTheme, onOpenApiKeyModal }) {
+export function Navbar({ onSelectCreator, currentHandle, isDark, onToggleTheme }) {
   const [searchInput, setSearchInput] = useState('');
 
   const handleSearchSubmit = (e) => {
@@ -68,30 +68,11 @@ export function Navbar({ onSelectCreator, currentHandle, isDark, onToggleTheme, 
 
           <button 
             className="nav-icon-btn" 
-            title="Configure YouTube Data API Key"
-            onClick={onOpenApiKeyModal}
-          >
-            <Key size={16} />
-          </button>
-
-          <button 
-            className="nav-icon-btn" 
             title="Toggle Light/Dark Theme"
             onClick={onToggleTheme}
           >
             {isDark ? <Sun size={16} /> : <Moon size={16} />}
           </button>
-
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="nav-github-link"
-            title="Inspired by GitHub Profiles"
-          >
-            <GitFork size={15} />
-            <span>GitHub Style</span>
-          </a>
         </div>
       </div>
     </header>
